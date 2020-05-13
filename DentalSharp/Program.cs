@@ -6,7 +6,8 @@ namespace DentalSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Home home = new Home();
+            home.Display();
         }
     }
 }
