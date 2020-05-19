@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using DentalSharp.Data;
 
 namespace DentalSharp
 {
@@ -6,7 +9,11 @@ namespace DentalSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var db = Data.Database.ParseData();
+            //Console.WriteLine(db.Doctors.First().Directions[0].Name);
+
+            Home home = new Home();
+            home.Display(db);
         }
     }
 }
